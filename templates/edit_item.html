@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="row padding-top padding-bottom">
+<div class="col"></div>
+<div class="col-md-10 padding-none" id="ljc-wrapper">
+<div class="container">
+<div class="row">
+<div class="col-3" >
+	{%if item %}
+	<h2>Edit Item</h2>
+	<div class="row">
+	<div class="col-md-10 categories-list">
+			<form action='#' method='post'>
+			<label>Title</label>
+			<input type="text" name="title" value={{item.name}}>
+			<br><br>
+			<label>Description: </label>
+			<input type="text" name="desc" value={{item.description}}>
+			<br><br>
+			<label>Category: </label>
+			<select name="category_id">
+				{% for category in categories %}
+				{% if category.id == item.category_id %}
+				<option value="{{category.id}}" selected>{{category.name}}</option>
+				{% else %}
+				<option value="{{category.id}}">{{category.name}}</option>
+				{% endif %}
+				{% endfor %}
+			</select>
+			<br><br>
+			<input type="submit">
+			<!-- <button id="submit-btn">Submit</button> -->
+			</form>
+	</div>
+	<div class="col-md-1"></div>
+	</div>
+	{% endif %}
+</div>
+</div>
+</div>
+</div>
+<div class="col"></div>
+</div>
+{% endblock %}

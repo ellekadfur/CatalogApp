@@ -1,0 +1,43 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="row padding-top padding-bottom">
+<div class="col"></div>
+<div class="col-md-10 padding-none" id="ljc-wrapper">
+	<div class="container">
+	<div class="row">
+		<div class="col-3" >
+			<h2>Categories</h2>
+			{% for category in categories %}
+				<div class="row">
+					<div class="col-md-10 categories-list">
+					<a class="listing-links" href = '{{url_for('showCategories')}}'>
+					{{category.name}}</a>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="col" id="ljc-vline">
+		<div id="inner-div">
+			{%if 'username' in session %}
+				<a class="listing-links" href='{{url_for('newItem')}}'>Add Item</a>
+			{% endif %}
+			<h2>Last Items</h2>
+			{% for item in items %}
+				<div class="row">
+				<div class="col-md-10 categories-list">
+					<a class="listing-links" href = '{{url_for('viewItem', item_id = item.id)}}'>
+					{{item.name}}<span> ({{item.category.name}})</span>
+					</a>
+				</div>
+				<div class="col-md-1"></div>
+				</div>
+			{% endfor %}
+		</div>
+		</div>
+	</div>
+	</div>
+</div>
+<div class="col"></div>
+</div>
+{% endblock %}

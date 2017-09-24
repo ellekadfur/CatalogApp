@@ -1,0 +1,50 @@
+header {
+	background-color: rgb(2,22,50);
+	height:55px;
+	width:100%;
+	display:flex;
+}
+header h1 {
+	margin-top: 5px;
+	color: #FFF;
+	/*padding-top: 0;*/
+}
+header button {
+	height:40px;
+	width:80px;
+	/*background-color: rgb(217,56,11);*/
+	background-color: rgb(227,78,6);
+	/*margin: 5px;*/
+	color: #FFF;
+	font-size: 17px;
+}
+
+#green {
+	background-color: green;
+}
+#yellow {
+	background-color: yellow;
+}
+
+#red {
+	background-color: red;
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+ /*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+ /*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+ /*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
