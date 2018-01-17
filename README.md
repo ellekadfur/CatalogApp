@@ -77,7 +77,7 @@ This is and will be the only version.
 
 ## Authors
 
-* **ileviathanx@gmail.com** - *Initial work*
+* **lamarjaycaaddfiir@gmail.com** - *Initial work*
 
 ## License
 
